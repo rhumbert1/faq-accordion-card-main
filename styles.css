@@ -1,6 +1,7 @@
 body {
   font-family: 'Kumbh Sans', sans-serif !important;
   color: hsl(237, 12%, 33%) !important;
+  font-weight: 400;
   background: linear-gradient(to top, hsl(240, 73%, 65%) 0%, hsl(273, 75%, 66%) 100%);
 }
 
@@ -37,11 +38,15 @@ h1 {
 }
 
 .collapsible:hover {
-  font-weight: bold;
+  color: hsl(14, 88%, 65%);
 }
 
 .collapsible:focus {
   outline: none;
+}
+
+.collapsible.active{
+  font-weight: bold;
 }
 
 .collapsible-arrow {
