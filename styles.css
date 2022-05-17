@@ -45,7 +45,7 @@ h1 {
   outline: none;
 }
 
-.collapsible.active{
+.collapsible.active {
   font-weight: bold;
 }
 
@@ -70,4 +70,22 @@ h1 {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+.illustration {
+  z-index: 1;
+  background-image: url("images/bg-pattern-desktop.svg");
+  background-size: 150%;
+  background-position: right center;
+}
+
+.box-illustration {
+  z-index: 2;
+  position: absolute;
+  top: 35%;
+  left: 0%;
+}
+
+#accordion {
+  background-color: #f1f1f1;
 }
