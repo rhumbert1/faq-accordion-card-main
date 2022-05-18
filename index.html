@@ -4,96 +4,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-  <script src="index.js" type="text/javascript"></script>
 
   <title>Frontend Mentor | FAQ Accordion Card</title>
+
+  <!--CSS link-->
+  <link href="styles.css" rel="stylesheet" type="text/css" />
+
+  <!--Font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-  <div class="background-gradient">
-
-    <div class="container">
-
-      <div class="row">
-
-        <div class="col-lg" id="left">
-
-          <img src="images\illustration-woman-online-desktop.svg" class="illustration" />
-          <img src="images\illustration-box-desktop.svg" class="box-illustration">
-
+  <main class="card">
+    <div class="card-image">
+      <img src="images/illustration-woman-online-mobile.svg" class="mobile_picture" alt="mobile-picture" />
+      <img src="images/illustration-box-desktop.svg" class="box_desk" alt="boxDesk_picture" />
+    </div>
+    <div class="card_text">
+      <h1>FAQ</h1>
+      <div class="accordion">
+        <div class="accordion_item">
+          <button class="accordion_question">
+            <!--questions variable -->
+            How many team members can I invite?
+          </button>
+          <div class="accordion_content">
+            <!--nextElementSibling-->
+            You can invite up to 2 additional users on the Free plan. There is no limit on
+            team members for the Premium plan.
+          </div>
         </div>
-
-        <div class="col-lg">
-
-          <h1>FAQ</h1><br />
-
-          <div id="accordion">
-            <div class="accordion-item">
-              <h3 class="collapsible">How many team members can I invite?<img src="images/icon-arrow-down.svg" class="collapsible-arrow"></h3>
-              <div>
-                <p class="content">
-                  You can invite up to 2 additional users on the Free plan. There is no limit on
-                  team members for the Premium plan.
-                </p>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h3 class="collapsible">What is the maximum file upload size?<img src="images/icon-arrow-down.svg" class="collapsible-arrow"></h3>
-              <div>
-                <p class="content">
-                  No more than 2GB. All files in your account must fit your allotted storage space.
-                </p>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h3 class="collapsible">How do I reset my password?<img src="images/icon-arrow-down.svg" class="collapsible-arrow"></h3>
-              <div>
-                <p class="content">
-                  Click “Forgot password” from the login page or “Change password” from your profile page.
-                  A reset link will be emailed to you.
-                </p>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h3 class="collapsible">Can I cancel my subscription?<img src="images/icon-arrow-down.svg" class="collapsible-arrow"></h3>
-              <div>
-                <p class="content">
-                  Yes! Send us a message and we’ll process your request no questions asked.
-                </p>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h3 class="collapsible">Do you provide additional support?<img src="images/icon-arrow-down.svg" class="collapsible-arrow"></h3>
-              <div>
-                <p class="content">
-                  Chat and email support is available 24/7. Phone lines are open during normal business hours.
-                </p>
-              </div>
-            </div>
-
+        <div class="accordion_item">
+          <button class="accordion_question">
+            <!--questions variable -->
+            What is the maximum file upload size?
+          </button>
+          <div class="accordion_content">
+            <!--nextElementSibling-->
+            No more than 2GB. All files in your account must fit your allotted storage space.
+          </div>
+        </div>
+        <div class="accordion_item">
+          <button class="accordion_question">
+            <!--questions variable -->
+            How do I reset my password?
+          </button>
+          <div class="accordion_content">
+            <!--nextElementSibling-->
+            Click “Forgot password” from the login page or “Change password” from your profile page.
+            A reset link will be emailed to you.
+          </div>
+        </div>
+        <div class="accordion_item">
+          <button class="accordion_question">
+            <!--questions variable -->
+            Can I cancel my subscription?
+          </button>
+          <div class="accordion_content">
+            <!--nextElementSibling-->
+            Yes! Send us a message and we’ll process your request no questions asked.
+          </div>
+        </div>
+        <div class="accordion_item">
+          <button class="accordion_question">
+            <!--questions variable -->
+            Do you provide additional support?
+          </button>
+          <div class="accordion_content">
+            <!--nextElementSibling-->
+            Chat and email support is available 24/7. Phone lines are open during normal business hours.
           </div>
         </div>
       </div>
-
-      <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io/challenges">Frontend Mentor</a>. Coded by <a href="https://github.com/rhumbert1">Morfrog.</a>
-
-      </div>
     </div>
+  </main>
 
-    <script src="index.js" charset="utf-8"></script>
+  <!--JS link-->
+  <script src="index.js"></script>
 
 </body>
 

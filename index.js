@@ -1,20 +1,30 @@
-var coll = document.getElementsByClassName("collapsible");
-var i;
+document.querySelectorAll('.accordion_question').forEach((question) =>
+  question.addEventListener('click', () => {
 
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-  });
-  coll[i].addEventListener("focusout", function() {
-    this.classList.remove("active");
-  });
-}
+    const questions = question;
+    const answers = question.nextElementSibling;
 
-$(document).ready(function() {
-  $("#accordion").accordion({
-    active: false,
-    collapsible: true
-  });
-  $(".selector").accordion("option", "active", false);
-  $(".selector").accordion("option", "collapsible", true);
-});
+    question.addEventListener('focusout', () => {
+      answers.classList.remove('open');
+      questions.classList.remove('active');
+    })
+
+    //Statement to add classes to the variables above;
+    if (question.classList.contains('active')) {
+
+      answers.classList.toggle('open');
+      questions.classList.toggle('active');
+
+    } else {
+
+      //Avoiding to open multiple accordions at the same time
+      document.querySelectorAll('.accordion_question').forEach((question) =>
+        question.classList.remove('active'));
+      question.classList.add('active');
+
+      document.querySelectorAll('.accordion_content').forEach((content) =>
+        content.classList.remove('open'))
+      answers.classList.add('open');
+    }
+  })
+)
