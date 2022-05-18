@@ -23,6 +23,7 @@ h1 {
   background-color: #f1f1f1;
   border-radius: 20px;
   padding: 50px 50px 50px 50px;
+  box-shadow: 0 40px 50px -30px hsl(237, 12%, 33%);
 }
 
 .collapsible {
